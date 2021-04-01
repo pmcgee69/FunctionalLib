@@ -1,0 +1,48 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{B760A43C-D96F-4D68-8B8A-C756DD0CF3DF}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="FunctionalDemo.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="FunctionalDemoTests.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="FunctionalDemo">
+			<MSBuild Projects="FunctionalDemo.dproj"/>
+		</Target>
+		<Target Name="FunctionalDemo:Clean">
+			<MSBuild Targets="Clean" Projects="FunctionalDemo.dproj"/>
+		</Target>
+		<Target Name="FunctionalDemo:Make">
+			<MSBuild Targets="Make" Projects="FunctionalDemo.dproj"/>
+		</Target>
+		<Target Name="FunctionalDemoTests">
+			<MSBuild Projects="FunctionalDemoTests.dproj"/>
+		</Target>
+		<Target Name="FunctionalDemoTests:Clean">
+			<MSBuild Targets="Clean" Projects="FunctionalDemoTests.dproj"/>
+		</Target>
+		<Target Name="FunctionalDemoTests:Make">
+			<MSBuild Targets="Make" Projects="FunctionalDemoTests.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="FunctionalDemo;FunctionalDemoTests"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="FunctionalDemo:Clean;FunctionalDemoTests:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="FunctionalDemo:Make;FunctionalDemoTests:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
