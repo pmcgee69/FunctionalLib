@@ -18,6 +18,7 @@ https://www.youtube.com/watch?v=7g-dmfSH6ZU
 Functional Programming in Delphi with Nick Hodges - DelphiCon 2020
 
 https://delphicon.embarcadero.com/talks/how-well-do-you-know-the-delphi-language/
+
 unlisted (https://www.youtube.com/watch?v=mRp37gvyvag)
 
 
