@@ -1,9 +1,11 @@
 # FunctionalLib
 Craig Stuntz's example code from CodeRage 3 - Functional Programming in Delphi
 
+
 Related content online:
 
 **YouTube**
+
 
 Functional Programming in Delphi 2009 - Craig Stuntz - CodeRage 3 (2008)
 
